@@ -2,8 +2,5 @@
 /local.properties
 /.idea
 .DS_Store
-<<<<<<< HEAD
 /build
-=======
-/build
->>>>>>> e3c4ae74b63438f8ec007ab327a7628950da743b
+
