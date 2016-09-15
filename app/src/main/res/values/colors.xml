@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--pure color-->
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+    
+    <!--theme color-->
+    <color name="colorPrimary">#2196F3</color><!--500-->
+    <color name="colorPrimaryDark">#1976D2</color><!--700-->
+    <color name="colorPrimaryLight">#BBDEFB</color><!--100-->
+    <color name="colorAccent">#FF4081</color>
+    <color name="style_text_color_primary">@color/white</color>
+    <color name="style_text_color_secondary">@color/white</color>
+    <color name="style_divider">#B6B6B6</color>
+    <color name="style_window_background">@color/white</color>
+    
+    <!--custom color-->
+    <color name="navigation_item_selected">#12000000</color>
+    <color name="navdrawer_background">@color/white</color>
+    <color name="navdrawer_text_color">@color/black</color>
+    <color name="navdrawer_text_color_selected">@color/colorPrimary</color>
+    <color name="navdrawer_icon_tint">#888</color>
+    <color name="navdrawer_icon_tion_selected">@color/colorPrimary</color>
+    <color name="item_date_text_color">#666666</color>
+    <color name="card_background_color">#ffffff</color>
+    <color name="item_story_text_color">#ff000000</color>
+    <color name="menu_text_color">@color/black</color>
+
+    <color name="window_background_night">#343434</color>
+    <color name="color222222">#222222</color>
+    <color name="color252525">#252525</color>
+    <color name="color343434">#343434</color>
+    <color name="color999999">#999999</color>
+    <color name="color888888">#888888</color>
+    <color name="color404040">#404040</color>
+</resources>

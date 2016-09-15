@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--v21采用material design风格-->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="DayTheme" parent="AppTheme">
+        <item name="navdrawer_background">@color/navdrawer_background</item>
+        <item name="navdrawer_text_color">@color/navdrawer_text_color</item>
+        <item name="item_date_text_color">@color/item_date_text_color</item>
+        <item name="item_story_text_color">@color/item_story_text_color</item>
+        <item name="item_story_background_color">@color/card_background_color</item>
+        <item name="android:windowBackground">@color/style_window_background</item>
+        <item name="windowBackground">@color/style_window_background</item>
+        <item name="menu_background">@color/style_window_background</item>
+        <item name="menu_text_color">@color/menu_text_color</item>
+    </style>
+
+    <style name="NightTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/color222222</item>
+        <item name="colorPrimaryDark">@color/color252525</item>
+        <item name="navdrawer_background">@color/color343434</item>
+        <item name="navdrawer_text_color">@color/color999999</item>
+        <item name="item_date_text_color">@color/color888888</item>
+        <item name="item_story_text_color">@color/white</item>
+        <item name="item_story_background_color">@color/color404040</item>
+        <item name="android:windowBackground">@color/window_background_night</item>
+        <item name="windowBackground">@color/window_background_night</item>
+        <item name="menu_background">@color/window_background_night</item>
+        <item name="menu_text_color">@color/white</item>
+    </style>
+</resources>

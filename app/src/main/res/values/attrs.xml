@@ -1,0 +1,37 @@
+<resources>
+
+    <declare-styleable name="ViewPagerIndicator">
+        <!-- Style of the circle indicator. -->
+        <attr name="vpiCirclePageIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CirclePageIndicator">
+        <!-- Whether or not the indicators should be centered. -->
+        <attr name="centered" format="boolean" />
+        <!-- Color of the filled circle that represents the current page. -->
+        <attr name="fillColor" format="color" />
+        <!-- Color of the filled circles that represents pages. -->
+        <attr name="pageColor" format="color" />
+        <!-- Orientation of the indicator. -->
+        <attr name="android:orientation" />
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <attr name="radius" format="dimension" />
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <attr name="snap" format="boolean" />
+        <!-- Color of the open circles. -->
+        <attr name="strokeColor" format="color" />
+        <!-- Width of the stroke used to draw the circles. -->
+        <attr name="strokeWidth" format="dimension" />
+        <!-- View background -->
+        <attr name="android_background" format="reference" />
+    </declare-styleable>
+
+    <attr name="navdrawer_background" format="color"/>
+    <attr name="navdrawer_text_color" format="color"/>
+    <attr name="item_date_text_color" format="color"/>
+    <attr name="item_story_text_color" format="color"/>
+    <attr name="item_story_background_color" format="color"/>
+    <attr name="menu_background" format="color"/>
+    <attr name="menu_text_color" format="color"/>
+    <attr name="windowBackground" format="color"/>
+</resources>

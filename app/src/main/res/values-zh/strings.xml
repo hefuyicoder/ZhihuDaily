@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">日报</string>
+    <string name="action_settings">设置</string>
+    <string name="action_share">分享</string>
+    <string name="navigation_drawer_close">关闭导航</string>
+    <string name="navigation_drawer_open">打开导航</string>
+    <string name="pref_default_display_name"></string>
+    <string name="title_activity_guider">引导</string>
+    <string name="title_activity_main">首页</string>
+    <string name="title_activity_settings">设置</string>
+    <string name="title_activity_story">详情页</string>
+    <string name="splash_text">艺术家:@乌有先生</string>
+    <string name="recycler_item_main_today_hottest">今日热文</string>
+    <string name="recycler_item_main_select_from">选自</string>
+    <string name="share_from">-来自日报的分享</string>
+    <string name="share_link">链接：</string>
+    <string name="avatar_title_referee">推荐人</string>
+    <string name="avatar_title_editor">主编</string>
+    <string name="action_nightmode">夜间模式</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Daily</string>
+    <string name="guide_btn_text">OK, let\'s experience it!</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+
+    <string name="title_activity_guider">Guider</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_story">StoryActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="splash_text">Artist: @乌有先生</string>
+
+    <string name="recycler_item_main_today_hottest">Today Hottest</string>
+    <string name="recycler_item_main_select_from">Selected from</string>
+
+    <string name="avatar_title_referee">Referee</string>
+    <string name="avatar_title_editor">Editor</string>
+
+    <string name="share_link">link:</string>
+    <string name="share_from">-shared from Daily</string>
+    <string name="action_nightmode">Night Mode</string>
+</resources>

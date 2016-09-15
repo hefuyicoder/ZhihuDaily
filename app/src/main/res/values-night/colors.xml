@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#222222</color>
+    <color name="item_date_text_color">#888888</color>
+    <color name="card_background_color">#404040</color>
+    <color name="style_window_background">#343434</color>
+    <color name="colorPrimaryDark">#252525</color>
+    <color name="navdrawer_background">#343434</color>
+    <color name="navdrawer_text_color">#999999</color>
+    <color name="style_text_color_primary">@color/white</color>
+    <color name="item_story_text_color">#ffffffff</color>
+    <color name="menu_text_color">#ffffff</color>
+
+
+</resources>
