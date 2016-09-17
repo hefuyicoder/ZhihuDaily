@@ -11,11 +11,11 @@ A demo app of Zhihu Daily based on MVP + RxJava + Retrofit2 + Dagger2 .
 
 ##Preview
 
-![](http://o8swcawjo.bkt.clouddn.com/%E5%90%AF%E5%8A%A8.gif)
+![](https://github.com/hefuyicoder/ZhihuDaily/blob/master/preview/启动.gif)
 
-![](http://o8swcawjo.bkt.clouddn.com/%E5%86%85%E5%AE%B9.gif)
+![](https://github.com/hefuyicoder/ZhihuDaily/blob/master/preview/内容.gif)
 
-![](http://o8swcawjo.bkt.clouddn.com/%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F.gif)
+![](https://github.com/hefuyicoder/ZhihuDaily/blob/master/preview/夜间模式.gif)
 
 ##Points
 - 参考 google 官方 MVP + Dagger2 架构,项目架构清晰，模块间耦合低
