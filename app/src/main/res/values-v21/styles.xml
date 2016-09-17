@@ -23,6 +23,8 @@
     <style name="NightTheme" parent="AppTheme">
         <item name="colorPrimary">@color/color222222</item>
         <item name="colorPrimaryDark">@color/color252525</item>
+        <item name="android:statusBarColor">@color/color252525</item>
+        <item name="android:navigationBarColor">@color/color252525</item>
         <item name="navdrawer_background">@color/color343434</item>
         <item name="navdrawer_text_color">@color/color999999</item>
         <item name="item_date_text_color">@color/color888888</item>

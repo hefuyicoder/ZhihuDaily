@@ -40,7 +40,6 @@ public class NavigationPresenterTest {
 
     @Test
     public void testRefreshError() {
-        Themes fakeTheme = new Themes();
         when(mUsecase.execute()).thenReturn(Observable.<Themes>error(new Throwable()));
         mPresenter.refresh();
         verify(mUsecase).execute();

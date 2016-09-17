@@ -1,10 +1,9 @@
 package io.hefuyi.zhihudaily.mvp.presenter;
 
+import io.hefuyi.zhihudaily.domain.FetchStartImageUsecase;
 import io.hefuyi.zhihudaily.mvp.contract.SplashContract;
 import io.hefuyi.zhihudaily.mvp.model.StartImage;
-import io.hefuyi.zhihudaily.domain.FetchStartImageUsecase;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
@@ -54,7 +53,6 @@ public class SplashPresenter implements SplashContract.Presenter {
         mUsecase.setScreenSize(width, height);
         mSubscription = mUsecase.execute()
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
                 .onErrorReturn(new Func1<Throwable, StartImage>() {
                     @Override
                     public StartImage call(Throwable throwable) {

@@ -1,10 +1,9 @@
 package io.hefuyi.zhihudaily.mvp.presenter;
 
+import io.hefuyi.zhihudaily.domain.FetchThemesUsecase;
 import io.hefuyi.zhihudaily.mvp.contract.NavigationContract;
 import io.hefuyi.zhihudaily.mvp.model.Themes;
-import io.hefuyi.zhihudaily.domain.FetchThemesUsecase;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
@@ -53,7 +52,6 @@ public class NavigationPresenter implements NavigationContract.Presenter{
     public void refresh() {
         mSubscription = mUsecase.execute()
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
                 .onErrorReturn(new Func1<Throwable, Themes>() {
                     @Override
                     public Themes call(Throwable throwable) {

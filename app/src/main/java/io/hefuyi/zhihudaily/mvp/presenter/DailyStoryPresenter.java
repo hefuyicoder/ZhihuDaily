@@ -1,11 +1,10 @@
 package io.hefuyi.zhihudaily.mvp.presenter;
 
-import io.hefuyi.zhihudaily.mvp.contract.DailyStoryContract;
-import io.hefuyi.zhihudaily.mvp.model.DailyStories;
 import io.hefuyi.zhihudaily.domain.FetchBeforeDailyStoriesUsecase;
 import io.hefuyi.zhihudaily.domain.FetchLatestDailyStoriesUsecase;
+import io.hefuyi.zhihudaily.mvp.contract.DailyStoryContract;
+import io.hefuyi.zhihudaily.mvp.model.DailyStories;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
@@ -59,7 +58,6 @@ public class DailyStoryPresenter implements DailyStoryContract.Presenter{
         mView.showRefreshing();
         Subscription subscription = mLatestDailyStoriesUsecase.execute()
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
                 .onErrorReturn(new Func1<Throwable, DailyStories>() {
                     @Override
                     public DailyStories call(Throwable throwable) {
@@ -87,7 +85,6 @@ public class DailyStoryPresenter implements DailyStoryContract.Presenter{
         mBeforeDailyStoriesUsecase.setDate(date);
         Subscription subscription = mBeforeDailyStoriesUsecase.execute()
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
                 .onErrorReturn(new Func1<Throwable, DailyStories>() {
                     @Override
                     public DailyStories call(Throwable throwable) {

@@ -171,7 +171,7 @@ public class DailyStoriesFragment extends BaseFragment implements DailyStoryCont
         theme.resolveAttribute(R.attr.windowBackground, windowBackground, true);
 
         Resources resources = getResources();
-        View window = ((ViewGroup) getActivity().getWindow().getDecorView());
+        View window = getActivity().getWindow().getDecorView();
         window.setBackgroundColor(resources.getColor(windowBackground.resourceId));
         int childCount = recyclerView.getChildCount();
         int firstVisible = mLinearLayoutManager.findFirstVisibleItemPosition();

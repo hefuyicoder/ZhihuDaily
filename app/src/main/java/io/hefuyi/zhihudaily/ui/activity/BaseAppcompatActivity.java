@@ -3,6 +3,7 @@ package io.hefuyi.zhihudaily.ui.activity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -77,6 +79,7 @@ public abstract class BaseAppcompatActivity extends AppCompatActivity {
             showAnimation();
             toggleThemeSetting();
             refreshUI();
+            refreshSystemBar();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -101,6 +104,21 @@ public abstract class BaseAppcompatActivity extends AppCompatActivity {
             });
             objectAnimator.start();
         }
+    }
+
+    private void refreshSystemBar() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            TypedValue statusBarColor = new TypedValue();
+            TypedValue navigationBarColor = new TypedValue();
+            Resources.Theme theme = getTheme();
+            theme.resolveAttribute(R.attr.colorPrimaryDark, statusBarColor, true);
+            theme.resolveAttribute(R.attr.colorPrimaryDark, navigationBarColor, true);
+
+            Resources resources = getResources();
+            getWindow().setStatusBarColor(resources.getColor(statusBarColor.resourceId));
+            getWindow().setNavigationBarColor(resources.getColor(navigationBarColor.resourceId));
+        }
+
     }
 
     @Override

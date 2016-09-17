@@ -1,11 +1,10 @@
 package io.hefuyi.zhihudaily.mvp.presenter;
 
-import io.hefuyi.zhihudaily.mvp.contract.ThemeStoryContract;
-import io.hefuyi.zhihudaily.mvp.model.Theme;
 import io.hefuyi.zhihudaily.domain.FetchThemeBeforeStoryUsecase;
 import io.hefuyi.zhihudaily.domain.FetchThemeUsecase;
+import io.hefuyi.zhihudaily.mvp.contract.ThemeStoryContract;
+import io.hefuyi.zhihudaily.mvp.model.Theme;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
@@ -60,7 +59,6 @@ public class ThemeStoryPresenter implements ThemeStoryContract.Presenter {
         mThemeUsecase.setThemeId(themeId);
         Subscription subscription = mThemeUsecase.execute()
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
                 .onErrorReturn(new Func1<Throwable, Theme>() {
                     @Override
                     public Theme call(Throwable throwable) {
@@ -87,7 +85,6 @@ public class ThemeStoryPresenter implements ThemeStoryContract.Presenter {
         mBeforeStoryUsecase.setStoryId(lastStoryId);
         Subscription subscription = mBeforeStoryUsecase.execute()
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
                 .onErrorReturn(new Func1<Throwable, Theme>() {
                     @Override
                     public Theme call(Throwable throwable) {

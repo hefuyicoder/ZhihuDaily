@@ -71,7 +71,6 @@ public class ThemeStoryPresenterTest {
     public void testLoadMoreError() {
         String themeId = "";
         String lastStoryId = "";
-        Theme fakeTheme = new Theme();
         when(mBeforeStoryUsecase.execute()).thenReturn(Observable.<Theme>error(new Throwable()));
         mPresenter.loadMore(themeId, lastStoryId);
         verify(mBeforeStoryUsecase).setStoryId(lastStoryId);

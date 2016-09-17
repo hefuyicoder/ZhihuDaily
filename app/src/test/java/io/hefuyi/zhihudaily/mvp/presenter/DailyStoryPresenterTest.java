@@ -64,7 +64,6 @@ public class DailyStoryPresenterTest {
     @Test
     public void testLoadMoreError() {
         String date = "";
-        DailyStories fakeDailyStory = new DailyStories();
         when(mBeforeDailyStoriesUsecase.execute()).thenReturn(Observable.<DailyStories>error(new Throwable()));
         mPresenter.loadMore(date);
         verify(mBeforeDailyStoriesUsecase).setDate(date);

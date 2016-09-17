@@ -23,7 +23,7 @@ public class GuideFragment extends Fragment {
 
     public static final String TAG = GuideFragment.class.getSimpleName();
 
-    private final String hello = "<h1>Welcome<h1><p>This application is a simple demonstration of Zhihu Daily Android developed by me. It's a free app. All the information, content and api copyright is belong to Zhihu. Inc.</Br><p>-Aspsine</p></p><h2>About</h2><p>Email: littleximail@gmail.com</p><p>Github: github.com/aspsine</p>";
+    private final String hello = "<h1>Welcome<h1><p>This application is a simple demonstration of Zhihu Daily Android developed by me. It's a free app. All the information, content and api copyright is belong to Zhihu. Inc.</Br><p>-Hefuyi</p></p><h2>About</h2><p>Email: hefuyicoder@gmail.com</p><p>Github: github.com/hefuyicoder</p>";
 
     @Bind(R.id.tvHello)
     TextView tvHello;

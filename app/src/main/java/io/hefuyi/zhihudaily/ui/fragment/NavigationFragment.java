@@ -13,6 +13,7 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -125,9 +126,11 @@ public class NavigationFragment extends Fragment implements NavigationDrawerCall
     public void refreshUI() {
         TypedValue headerBackground = new TypedValue();
         TypedValue navdrawerBackground = new TypedValue();
+        TypedValue navdrawerTextColor = new TypedValue();
         Resources.Theme theme = getActivity().getTheme();
         theme.resolveAttribute(R.attr.colorPrimaryDark, headerBackground, true);
         theme.resolveAttribute(R.attr.navdrawer_background, navdrawerBackground,true);
+        theme.resolveAttribute(R.attr.navdrawer_text_color, navdrawerTextColor, true);
 
         recyclerView.setBackgroundResource(navdrawerBackground.resourceId);
         int childCount = recyclerView.getChildCount();
@@ -139,6 +142,9 @@ public class NavigationFragment extends Fragment implements NavigationDrawerCall
                     header.setBackgroundResource(headerBackground.resourceId);
                     break;
                 case NavigationDrawerAdapter.Type.TYPE_ITEM:
+                    ViewGroup item = (ViewGroup) recyclerView.getChildAt(childIndex);
+                    TextView textView = (TextView) item.findViewById(R.id.tvItemName);
+                    textView.setTextColor(navdrawerTextColor.resourceId);
                     break;
                 case NavigationDrawerAdapter.Type.TYPE_BOTTOM_SPACE:
                     View childView = recyclerView.getChildAt(childIndex);
@@ -146,6 +152,7 @@ public class NavigationFragment extends Fragment implements NavigationDrawerCall
                     break;
             }
         }
+        mAdapter.notifyDataSetChanged();
     }
 
     public static int getDefaultNavDrawerItem() {
